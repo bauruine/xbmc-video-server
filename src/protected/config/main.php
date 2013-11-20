@@ -54,7 +54,7 @@ return array(
 			'coreScriptPosition'=>CClientScript::POS_END,
 			'packages'=>array(
 				'jquery'=>array(
-					'baseUrl'=>'//ajax.googleapis.com/ajax/libs/jquery/1.9.1/',
+					'baseUrl'=>'/src/js/',
 					'js'=>array(YII_DEBUG ? 'jquery.js' : 'jquery.min.js'),
 				),
 			),
