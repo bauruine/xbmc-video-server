@@ -8,6 +8,33 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 article,
 aside,
 details,
@@ -5244,33 +5271,6 @@ a.badge:focus {
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
-.clearfix {
-  *zoom: 1;
-}
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.clearfix:after {
-  clear: both;
-}
-.hide-text {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
-.input-block-level {
-  display: block;
-  width: 100%;
-  min-height: 30px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 @-ms-viewport {
   width: device-width;
 }
@@ -8565,8 +8565,15 @@ a .icon-flip-vertical:before {
   -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
+.grid-view {
+  font-size: inherit;
+}
 .grid-view.grid-view-loading {
   background-image: url(../images/loader.gif);
+}
+.grid-view .summary {
+  font-size: inherit;
+  color: inherit;
 }
 h1 > a,
 h2 > a,
@@ -8626,6 +8633,20 @@ span.required {
 }
 .movie-filter-form .buttons button {
   margin-right: 20px;
+}
+.display-mode-toggle {
+  margin-bottom: 20px;
+  text-align: right;
+}
+.display-mode-toggle .summary {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.display-mode-toggle .btn-group {
+  margin-left: 20px;
+}
+.display-mode-toggle .btn-group ul > li > a {
+  text-align: left;
 }
 .item-grid .caption,
 .actor-grid .caption {
@@ -8708,18 +8729,12 @@ span.required {
 .item-details .item-description .actor-grid .thumbnail .image-container {
   min-height: 182px;
 }
-.recently-added-shows {
-  margin-top: 20px;
-  padding: 20px;
-}
-.recently-added-shows,
 .season-list {
   border: 1px solid #E5E5E5;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
 }
-.recently-added-shows .episode-thumbnail,
 .season-list .episode-thumbnail {
   max-width: 116px;
 }
@@ -8766,6 +8781,9 @@ span.required {
   display: inline-block;
   margin-right: 5px;
 }
+.log-grid {
+  font-size: 13px;
+}
 .log-grid tr.error-row td {
   background-color: #e74c3c !important;
   color: #FFF;
@@ -8783,12 +8801,4 @@ span.required {
 .log-details .exception-message {
   font-family: "Courier New", Courier, monospace;
   font-size: 12px;
-}
-@media all and (max-width: 767px) {
-  .item-grid .thumbnail .image-container {
-    display: none;
-  }
-  .item-grid .thumbnail .caption {
-    min-height: auto;
-  }
 }

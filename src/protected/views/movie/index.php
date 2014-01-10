@@ -1,5 +1,6 @@
 <?php
 
+/* @var $this MovieController */
 /* @var $filterForm MovieFilterForm */
 /* @var $dataProvider LibraryDataProvider */
 $this->pageTitle = 'Movies';
@@ -13,9 +14,17 @@ $this->pageTitle = 'Movies';
 $this->widget('MovieFilter', array(
 	'model'=>$filterForm));
 
-$this->widget('ResultGrid', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_movieGridItem',
-	'itemsTagName'=>'ul',
-	'itemsCssClass'=>'thumbnails item-grid',
-));
+switch ($this->getDisplayMode())
+{
+	case MediaController::DISPLAY_MODE_GRID:
+		$this->widget('ResultGrid', array(
+			'dataProvider'=>$dataProvider,
+			'itemView'=>'_movieGridItem',
+		));
+		break;
+	case MediaController::DISPLAY_MODE_LIST:
+		$this->widget('ResultList', array(
+			'dataProvider'=>$dataProvider,
+		));
+		break;
+}
