@@ -83,6 +83,25 @@ span.required {
 	}
 }
 
+.display-mode-toggle {
+	margin-bottom: 20px;
+	text-align: right;
+	
+	.summary {
+		display: inline-block;
+		margin-bottom: 0;
+	}
+	
+	.btn-group {
+		margin-left: 20px;
+	
+		// reset text-align on the dropdown menu items
+		ul > li > a {
+			text-align: left;
+		}
+	}
+}
+
 .item-grid, .actor-grid {
 	.caption {
 		min-height: 60px;
@@ -200,12 +219,7 @@ span.required {
 	}
 }
 
-.recently-added-shows {
-	margin-top: 20px;
-	padding: 20px;
-}
-
-.recently-added-shows, .season-list {
+.season-list {
 	border: 1px solid #E5E5E5;
 	.border-radius(@baseBorderRadius);
 	
@@ -270,6 +284,9 @@ span.required {
 }
 
 .log-grid {
+	// slightly smaller than usual
+	font-size: 13px;
+	
 	tr.error-row td {
 		background-color: @red !important;
 		color: #FFF;
@@ -292,19 +309,5 @@ span.required {
 	.exception-message {
 		font-family: "Courier New", Courier, monospace;
 		font-size: 12px;
-	}
-}
-
-@media all and (max-width: 767px) {
-	.item-grid {
-		.thumbnail {
-			.image-container {
-				display: none;
-			}
-
-			.caption {
-				min-height: auto;
-			}
-		}
 	}
 }
