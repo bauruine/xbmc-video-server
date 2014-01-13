@@ -18,7 +18,7 @@ abstract class MediaFlag extends CWidget
 	/**
 	 * @var stdClass details for a media file
 	 */
-	public $details;
+	public $file;
 
 	/**
 	 * @var stdClass the audio part of the stream details

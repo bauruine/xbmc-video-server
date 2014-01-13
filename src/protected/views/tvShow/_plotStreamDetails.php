@@ -5,5 +5,5 @@
 <div class="episode-streamdetails">
 	<?php $this->widget('MediaFlags', array(
 		'streamDetails'=>$episode->streamdetails,
-		'details'=>$episode)); ?>
+		'file'=>$episode)); ?>
 </div>
