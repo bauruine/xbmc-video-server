@@ -65,7 +65,7 @@ $this->pageTitle = $details->label.' ('.$details->year.') - Movies';
 					<?php
 							$this->widget('MediaFlags', array(
 							'streamDetails'=>$details->streamdetails,
-							'details'=>$details
+							'file'=>$details->file
 					)); ?>
 				</div>
 			</div>
